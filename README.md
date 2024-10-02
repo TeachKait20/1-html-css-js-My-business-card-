@@ -6,7 +6,7 @@
 
 ## Визуальная часть
 
-<img src="https://github.com/TeachKait20/NoneCode/blob/main/for+blog/web-design.gif?raw=true">
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/for+blog/web-design.gif?raw=true" width="400">
 
 Для начала будет неплохо определиться с будущим, примерным дизайном сайта. Для этого можно посмотреть готовые сайты (референсы).
 
