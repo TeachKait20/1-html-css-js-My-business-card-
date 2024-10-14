@@ -253,3 +253,83 @@ h1 {
 ```
 
 Используйте [документацию](https://htmlbook.ru/css), если не помните свойство или как оно устроено.
+
+## Создание своей страницы (CSS часть)
+Свойства CSS будут в отдельном файле. Подключим его к HTML.
+
+![image](https://github.com/user-attachments/assets/f4954b92-a27c-4fd1-87e2-64803f6a6eea)
+
+В остальном html код не изменился.
+```css
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card {
+    background-color: #2c2c2c;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+}
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #555;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.social-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #00aaff;
+}
+.button {
+    display: inline-block;
+    background-color: #00aaff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #008ecc;
+}
+
+a {
+    margin-top: 20px;
+}
+```
+
+![image](https://github.com/user-attachments/assets/330ae62f-5473-4f99-9afd-9f23ae020efd)
+
+В документации прочтите о свойствах применённых выше. Обратите внимание на структуру.
