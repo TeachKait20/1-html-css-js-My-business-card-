@@ -6,7 +6,7 @@
 
 ## Визуальная часть
 
-<img src="https://github.com/TeachKait20/NoneCode/blob/main/for+blog/web-design.gif?raw=true" width="400">
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/for+blog/dev_des.gif?raw=true" width="400">
 
 Для начала, неплохо определиться с будущим дизайном сайта. Хороший способ сделать это — просмотреть готовые сайты и найти референсы.
 
@@ -38,7 +38,7 @@
 
 ## HTML
 
-<img src="https://github.com/TeachKait20/NoneCode/blob/main/for+blog/html.gif?raw=true">
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/for+blog/html.gif?raw=true" width="400">
 
 **HTML (HyperText Markup Language)** — это язык разметки, используемый для создания структуры веб-страниц. Он описывает содержимое страниц с помощью тегов, которые определяют элементы, такие как заголовки, параграфы, ссылки, изображения и т. д. Давайте рассмотрим основные элементы HTML и разберем, что такое теги.
 
@@ -104,6 +104,152 @@
 
 Используйте [документацию](https://htmlbook.ru/html), если не помните тег или как он устроен.
 
+### Классы и Id
+В HTML, CSS и JS классы и идентификаторы (ID) — это атрибуты, используемые для стилизации элементов и управления их поведением. <br>
+В будущем они могут понадобится для стилизации в CSS, чтобы определить какой именно объект необходимо редактировать. К примеру, если у вас есть два блока `div`, надо будет как-то идентифицировать один из них. 
+
+### Классы
+
+Классы позволяют применять одни и те же стили к нескольким элементам, например:
+```html
+<div class="box">Блок 1</div>
+<div class="box">Блок 2</div>
+<div>Блок 3</div>
+```
+Вызов в CSS будет происходить через `.`
+```css
+.box {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+}
+```
+Пока CSS применяется для наглядности.
+
+### Id
+Если у вас есть несколько одинаковых блоков `div`, и вам нужно изменить стили или поведение только одного из них (или у каждого отдельно), вы можете использовать ID, чтобы идентифицировать его:
+```html
+<div id="box1">Блок 1</div>
+<div id="box2">Блок 2</div>
+<div id="box3">Блок 3</div>
+```
+Вызов в CSS будет происходить через `#`
+```css
+#box1 {
+    background-color: #FF5733;
+    color: white;
+    padding: 20px;
+    margin: 15px;
+}
+```
 ## Создание своей страницы (HTML часть)
 
+Пример простой страницы для сайта-визитки. Такой дизайн часто используют для представления себя или своего проекта с минималистичным подходом:
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My business card</title>
+    
+</head>
+<body>
+    <div class="card">
+        <img src="avatar.png" alt="Profile Picture" class="profile-img">
+        <h1>Paul Def</h1>
+        <p>Frontend developer with experience in creating stylish and functional websites. Always looking for new ideas and technologies.</p>
+        <div class="social-links">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+        <a href="mailto:your.email@example.com" class="button">contact</a>
+    </div>
+</body>
+</html>
+```
+Описание новых тегов и атрибутов:
+* `<a href="#" target="_blank">...</a>` — символ `#` в `href` используется как заглушка. В будущем можно заменить его на реальный URL-адрес, например, ссылку на ваш профиль в социальной сети или на другой сайт.
+* `target="_blank"` — этот атрибут указывает браузеру открывать ссылку в новой вкладке или окне. Это полезно, когда не хочется, чтобы пользователь покидал текущую страницу, например, при переходе на внешние ресурсы.
+* `<a href="mailto:your.email@example.com" class="button">contact</a>` — это ссылка, которая открывает почтовое приложение по умолчанию на устройстве пользователя для отправки письма.
+
+![image](https://github.com/user-attachments/assets/4714ce41-4394-41d6-9d70-dd559740eb6b)
+
+## CSS
+
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/for+blog/web-design.gif?raw=true" width="400">
+
+**CSS (Cascading Style Sheets)** — это язык стилевого оформления, который используется для управления внешним видом HTML-документов. С помощью CSS вы можете задавать цвета, шрифты, размеры, отступы и многие другие параметры для элементов на веб-странице.
+
+### Способы подключения CSS
+**1.** Внутренний стиль (Embedded CSS): CSS-правила пишутся внутри тега <style> в разделе <head> HTML-документа.
+Файл html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример внутреннего CSS</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Привет, мир!</h1>
+    <p>Это пример использования внутреннего CSS.</p>
+</body>
+</html>
+```
+**2.** Внешний стиль (External CSS): CSS-правила находятся в отдельном файле с расширением .css, который подключается к HTML-документу с помощью тега <link>.
+Файл html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример внешнего CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Привет, мир!</h1>
+    <p>Это пример использования внешнего CSS.</p>
+</body>
+</html>
+```
+файл style.css
+```css
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #333;
+}
+p {
+    color: #555;
+}
+```
+
+### Селекторы
+CSS использует селекторы для определения, к каким элементам применять стили.
+```css
+h1 {
+    color: blue;
+}
+```
+
+Используйте [документацию](https://htmlbook.ru/css), если не помните свойство или как оно устроено.
