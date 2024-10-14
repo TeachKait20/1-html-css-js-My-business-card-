@@ -347,5 +347,16 @@ JavaScript выполняется непосредственно в браузе
 ### Подключение JavaScript к селекторам
 
 JavaScript позволяет работать с элементами HTML через селекторы, используя такие методы, как `getElementById`, `querySelector`, `getElementsByClassName` и другие.
-<br>
+<br><br>
 [Документация JavaScript](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide)
+<br><br>
+Будем изучать JS по мере прохождения курса. А пока напишем функцию, которая будет выводить сообщение на страницу, если пользователь находитсяболее 10 секунд.
+<br>
+`alert()` - вызывает всплывающее окно с сообщением.
+<br>
+![image](https://github.com/user-attachments/assets/7dbe4b8f-6615-4938-b0a1-1b849e3b5148)
+```javascript
+setTimeout(function() {
+    alert("Contact me!");
+}, 10000);
+```
