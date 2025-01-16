@@ -1,4 +1,4 @@
-# html-css-js 
+# html-css-js
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=47B859&width=435&separator=%40&lines=%3Cp%3E+my+first+project+%3C%2Fp%3E%40style+%7Bcolor%3A+green;+height%3A+5px%7D%40var+num+%3D+5;%40%3Ch1%3E+What+are+they+saying%3F+%F0%9F%98%B6+%3C%2Fh1%3E)](https://git.io/typing-svg)
 
